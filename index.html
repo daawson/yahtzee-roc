@@ -1,0 +1,49 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Yahtzee</title>
+        <script src="js/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Yahtzee</h1>
+        <div id="cubes">
+            <table>
+                <tr>
+                    <td><img src="img/d1.svg" alt="dice" class="cube invisible" id="1" onclick="checkRemove(this)"></td>
+                    <td><img src="img/d1.svg" alt="dice" class="cube invisible" id="2" onclick="checkRemove(this)"></td>
+                    <td><img src="img/d1.svg" alt="dice" class="cube invisible" id="3"  onclick="checkRemove(this)"></td>
+                    <td><img src="img/d1.svg" alt="dice" class="cube invisible" id="4" onclick="checkRemove(this)"></td>
+                    <td><img src="img/d1.svg" alt="dice" class="cube invisible" id="5" onclick="checkRemove(this)"></td>
+                </tr>
+            </table>
+        </div>
+        <p id="roll-div">
+            <button onclick="roll(this)" id="roll" disabled>Roll</button></p>
+        <div id="ui">
+            <table>
+                <tr><td><button onclick="checkByNummer(this, 1)">Einen</button></td><td id="p1">0</td></tr>
+                <tr><td><button onclick="checkByNummer(this, 2)">Tweeen</button></td><td id="p2">0</td></tr>
+                <tr><td><button onclick="checkByNummer(this, 3)">Drieen</button></td><td id="p3">0</td></tr>
+                <tr><td><button onclick="checkByNummer(this, 4)">Vieren</button></td><td id="p4">0</td></tr>
+                <tr><td><button onclick="checkByNummer(this, 5)">Vijven</button></td><td id="p5">0</td></tr>
+                <tr><td><button onclick="checkByNummer(this, 6)">Zessen</button></td><td id="p6">0</td></tr>
+                <tr><td>Bonus</td><td id="bonus">0</td></tr>
+            </table>
+            <table>
+                <tr><td id="p7">0</td><td><button onclick="checkThreeSame(this)">3 Dezelfde</button></td></tr>
+                <tr><td id="p8">0</td><td> <button onclick="checkCaree(this)">Caree</button></td></tr>
+                <tr><td id="p9">0</td><td> <button onclick="checkFullHouse(this)">Full house</button></td></tr>
+                <tr><td id="p10">0</td><td> <button onclick="checkKlStraat(this)">Kl. straat</button></td></tr>
+                <tr><td id="p11">0</td><td><button onclick="checkGrStraat(this)">Gr. straat</button></td></tr>
+                <tr><td id="p12">0</td><td> <button onclick="checkYahtzee(this)">YAHTZEE</button></td></tr>
+                <tr><td id="p13">0</td><td> <button onclick="checkChance(this)">Chance</button></td></tr>
+                <tr><td colspan="2"><button onclick="newGame()" id="newgame">Nieuw spel</button></td> </tr>
+            </table>
+        </div>
+
+        <p id="points">Score: 0</p>
+    </body>
+</html>
